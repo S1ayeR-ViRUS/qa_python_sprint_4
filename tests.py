@@ -16,11 +16,7 @@ class TestBooksCollector:
         collector.set_book_genre('Трое из Простоквашино', genre)
         assert collector.get_book_genre('Трое из Простоквашино') == genre
 
-    def test_get_book_genre_get_genre_one_book(self):
-        collector = BooksCollector()
-        collector.add_new_book('Незнайка на луне')
-        collector.set_book_genre('Незнайка на луне', 'Комедии')
-        assert collector.get_book_genre('Незнайка на луне') == 'Комедии'
+    
 
     @pytest.mark.parametrize('genre', ['Фантастика', 'Ужасы', 'Детективы', 'Мультфильмы', 'Комедии'])
     def test_get_books_with_specific_genre_get_books_selected_genre(self, genre):
